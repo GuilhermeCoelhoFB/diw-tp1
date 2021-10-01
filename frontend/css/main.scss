@@ -53,12 +53,13 @@ main {
   }
 
   .containerProjects {
-    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-
+    h2 {
+      justify-content: flex-start;
+    }
     img {
       height: 30vh;
     }
