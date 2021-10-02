@@ -72,6 +72,30 @@ main {
     margin-top: 1rem;
     justify-content: flex-end;
   }
+
+  #exp {
+    ul li {
+      list-style-type: none;
+    }
+    .expEl {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      span {
+        padding: 4vw;
+        margin: 3vh;
+        text-align: left;
+        p {
+          margin: 3vw 0;
+        }
+      }
+      img {
+        margin: 2vw;
+        height: 20vh;
+        justify-content: flex-start;
+      }
+    }
+  }
 }
 
 footer {

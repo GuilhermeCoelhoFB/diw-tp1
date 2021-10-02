@@ -118,6 +118,40 @@ main section #moreProj {
           justify-content: flex-end;
 }
 
+main #exp ul li {
+  list-style-type: none;
+}
+
+main #exp .expEl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #exp .expEl span {
+  padding: 4vw;
+  margin: 3vh;
+  text-align: left;
+}
+
+main #exp .expEl span p {
+  margin: 3vw 0;
+}
+
+main #exp .expEl img {
+  margin: 2vw;
+  height: 20vh;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 footer {
   background: lightgreen;
   padding: 3rem;
