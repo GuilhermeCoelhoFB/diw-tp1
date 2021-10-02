@@ -107,30 +107,36 @@ main {
   }
 
   #repo {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    #repoAll {
+      display: inline-flex;
+      .repoUnit {
+        display: flex;
+        height: 40vh;
+        width: 55vh;
+        text-align: justify;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 0.5rem;
+        .repoImg {
+          margin: 1rem;
+          height: 8vh;
+        }
 
-    article {
-      height: 40vh;
-      width: 45vh;
-      text-align: justify;
-      flex-wrap: wrap;
-      margin: 1.6rem;
-      justify-content: flex-start;
-      align-items: flex-start;
-      img {
-        margin: 0.7vw;
-        height: 8vh;
+        .repoDesc {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          margin: 1rem;
+          p {
+            margin: 0.5rem 0;
+          }
+        }
       }
 
-      h3 {
+      button {
         align-self: flex-end;
       }
-    }
-
-    button {
-      align-self: flex-end;
     }
   }
 }
