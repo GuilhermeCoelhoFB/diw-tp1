@@ -29,6 +29,11 @@ header {
 }
 
 main {
+  button {
+    float: right;
+    padding: 3vh;
+    margin: 3vw 0;
+  }
   section {
     margin: 8rem 0;
   }
@@ -52,6 +57,7 @@ main {
   }
 
   .containerProjects {
+    padding: 1vh;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -88,12 +94,43 @@ main {
         p {
           margin: 3vw 0;
         }
+        h4 {
+          opacity: 0.5;
+        }
       }
       img {
         margin: 2vw;
-        height: 20vh;
+        height: 25vh;
         justify-content: flex-start;
       }
+    }
+  }
+
+  #repo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    article {
+      height: 40vh;
+      width: 45vh;
+      text-align: justify;
+      flex-wrap: wrap;
+      margin: 1.6rem;
+      justify-content: flex-start;
+      align-items: flex-start;
+      img {
+        margin: 0.7vw;
+        height: 8vh;
+      }
+
+      h3 {
+        align-self: flex-end;
+      }
+    }
+
+    button {
+      align-self: flex-end;
     }
   }
 }

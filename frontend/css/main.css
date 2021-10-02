@@ -42,6 +42,12 @@ main {
   padding: 0 10vw;
 }
 
+main button {
+  float: right;
+  padding: 3vh;
+  margin: 3vw 0;
+}
+
 main section {
   margin: 8rem 0;
 }
@@ -79,6 +85,7 @@ main section div .personalContainer {
 }
 
 main .containerProjects {
+  padding: 1vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -144,12 +151,58 @@ main #exp .expEl span p {
   margin: 3vw 0;
 }
 
+main #exp .expEl span h4 {
+  opacity: 0.5;
+}
+
 main #exp .expEl img {
   margin: 2vw;
-  height: 20vh;
+  height: 25vh;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+main #repo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main #repo article {
+  height: 40vh;
+  width: 45vh;
+  text-align: justify;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1.6rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main #repo article img {
+  margin: 0.7vw;
+  height: 8vh;
+}
+
+main #repo article h3 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+main #repo button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 footer {
