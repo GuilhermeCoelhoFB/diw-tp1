@@ -45,7 +45,6 @@ main {
       margin: 2.5rem;
     }
     .personalContainer {
-      display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       text-align: left;
@@ -63,9 +62,15 @@ main {
     img {
       height: 30vh;
     }
+    .dropdown {
+      margin-top: 0;
+      justify-content: flex-end;
+    }
   }
-  button {
-    text-align: right;
+  section #moreProj {
+    float: right;
+    margin-top: 1rem;
+    justify-content: flex-end;
   }
 }
 

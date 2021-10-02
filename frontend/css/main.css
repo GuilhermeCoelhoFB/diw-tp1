@@ -68,9 +68,6 @@ main section div img {
 }
 
 main section div .personalContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -106,8 +103,19 @@ main .containerProjects img {
   height: 30vh;
 }
 
-main button {
-  text-align: right;
+main .containerProjects .dropdown {
+  margin-top: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main section #moreProj {
+  float: right;
+  margin-top: 1rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 footer {

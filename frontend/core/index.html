@@ -12,18 +12,22 @@
 <body>
     <header>
         <nav>
-            <a href="">perfil</a>
-            <a href="">projetos</a>
-            <a href="">experiência</a>
-            <a href="">repositórios github</a>
-            <a href="">conteúdo</a>
+            <a href="#personal">perfil</a>
+            <p>|</p>
+            <a href="#proj">projetos</a>
+            <p>|</p>
+            <a href="#exp">experiência</a>
+            <p>|</p>
+            <a href="#repo">repositórios github</a>
+            <p>|</p>
+            <a href="#conteudo">conteúdo</a>
 
             <label for="search"></label><input name="search" type="text" value="" placeholder="Pesquisar...">
         </nav>
     </header>
 
     <main>
-        <section>
+        <section id="personal">
             <div>
                 <img id="picGuilherme"
                     src="https://media-exp1.licdn.com/dms/image/C4E03AQFCxuzvc7BKwA/profile-displayphoto-shrink_800_800/0/1621270207007?e=1638403200&v=beta&t=oQWWu-kkgXARUQjwXP1RgwUrfUB5C7_r2qZPGc8MmKw"
@@ -47,7 +51,7 @@
             </div>
         </section>
 
-        <section class="containerProjects">
+        <section id="proj" class="containerProjects">
             <h2>Projetos</h2>
             <div class="dropdown">
                 <button class="dropbtn">Dropdown</button>
@@ -71,27 +75,16 @@
                 <h4>Project A - 2000</h4>
             </span>
         </div>
-            <button>Carregar mais projetos</button>
+            <button id="moreProj" >Carregar mais projetos</button>
         </section>
 
-        <section>
+        <section id="exp">
             <h2>Experiência</h2>
             <article>
-                <img src="https://www.bestcoinlist.com/img/ico-logo/monnos.jpg" alt="">
-                <h3>Cargo/Funcao</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce ultricies erat in diam
-                    fringilla volutpat sit amet sit amet augue.</p>
-                <h4>Período: 00/00/0000</h4>
-            </article>
-
-            <article>
-                <img src="https://www.bestcoinlist.com/img/ico-logo/monnos.jpg" alt="">
-                <h3>Cargo/Funcao</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce ultricies erat in diam
-                    fringilla volutpat sit amet sit amet augue.</p>
-                <h4>Período: 00/00/0000</h4>
+                <img src="https://media-exp1.licdn.com/dms/image/C560BAQFgwOw-EcXUig/company-logo_200_200/0/1544474223392?e=1641427200&v=beta&t=nZidEXj3QwuWpsLrUvaALXFTvuaPIrR_zINeBr0vkVQ" alt="">
+                <h3>Teknisa - Estagiário de programação</h3>
+                <p>Implementar, corrigir e buscar novas soluções para as aplicações da empresa.</p>
+                <h4>Período: 17/04/2021 a 20/07/2021</h4>
             </article>
 
             <article>
@@ -105,7 +98,7 @@
             <button>Carregar mais experiências</button>
         </section>
 
-        <section>
+        <section id="repo">
             <h2>Repositórios Github</h2>
             <article>
                 <h3>Repositorio A</h3>
@@ -118,7 +111,7 @@
         </section>
 
 
-        <section>
+        <section id="conteudo">
             <h2>Recomendação de conteúdo</h2>
             <article>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/RVUK2rtAkJE"
