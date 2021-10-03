@@ -31,9 +31,8 @@ header {
 
 main {
   button {
-    float: right;
-    padding: 3vh;
-    margin: 3vw 0;
+    padding: 1.5vh;
+    margin: 1vw 0;
   }
   section {
     margin: 8rem 0;
@@ -83,26 +82,30 @@ main {
   }
 
   .containerProjects {
-    display: flex;
-    padding: 1vh;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    h2 {
-      justify-content: flex-start;
+    .titleContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    img {
-      height: 30vh;
+    .projImgContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 0.5rem 0 0.5rem 0;
     }
-    .dropdown {
-      margin-top: 0;
-      justify-content: flex-end;
+
+    .projImgEl {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      max-width: 300px;
+      min-width: 300px;
+      margin: 0.5rem 0.5rem;
     }
   }
   section #moreProj {
     float: right;
-    margin-top: 1rem;
     justify-content: flex-end;
   }
 
