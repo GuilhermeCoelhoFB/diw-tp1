@@ -17,6 +17,7 @@ header {
   nav {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
     a {
       text-decoration: none;
