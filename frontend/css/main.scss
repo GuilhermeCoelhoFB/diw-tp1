@@ -26,6 +26,10 @@ header {
     input {
       padding: 0.7rem;
     }
+    img {
+      min-width: 10px;
+      max-width: 3vh;
+    }
   }
 }
 
@@ -66,6 +70,7 @@ main {
         display: flex;
         flex-grow: 1;
         justify-content: space-between;
+        align-items: flex-end;
       }
 
       p {
@@ -141,25 +146,37 @@ main {
         justify-content: flex-start;
       }
     }
+    button {
+      float: right;
+    }
   }
 
   #repo {
     #repoAll {
-      display: inline-flex;
+      margin: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
       .repoUnit {
         display: flex;
-        height: 40vh;
-        width: 55vh;
-        text-align: justify;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
+        flex-direction: column;
+        flex: 1;
+        justify-content: center;
+        min-height: 400px;
+        max-height: 30vh;
+        text-align: left;
         padding-top: 0.5rem;
+        min-width: 400px;
+        max-width: 10vh;
+        flex-grow: 1;
+        a {
+          width: 6rem;
+        }
         .repoImg {
           margin: 1rem;
           height: 8vh;
         }
-
         .repoDesc {
           display: flex;
           flex-wrap: wrap;
@@ -170,10 +187,9 @@ main {
           }
         }
       }
-
-      button {
-        align-self: flex-end;
-      }
+    }
+    button {
+      float: right;
     }
   }
 
@@ -181,17 +197,25 @@ main {
     #conteudoContainer {
       margin: 1.5rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       flex-wrap: wrap;
       align-content: space-around;
 
       .conteudoUnit {
-        width: 20rem;
+        max-width: 40vh;
+        min-width: 20rem;
+
+        iframe {
+          width: 100%;
+        }
         p {
           text-align: left;
-          padding: 1rem 0;
+          padding: 0.5rem 0;
         }
       }
+    }
+    button {
+      float: right;
     }
   }
 }

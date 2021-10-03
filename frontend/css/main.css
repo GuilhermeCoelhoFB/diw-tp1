@@ -40,6 +40,11 @@ header nav input {
   padding: 0.7rem;
 }
 
+header nav img {
+  min-width: 10px;
+  max-width: 3vh;
+}
+
 main {
   padding: 0 10vw;
 }
@@ -110,6 +115,9 @@ main #personal div .personalContainer #personalTextContainer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 main #personal div .personalContainer p {
@@ -223,30 +231,51 @@ main #exp .expEl .expImg {
           justify-content: flex-start;
 }
 
+main #exp button {
+  float: right;
+}
+
 main #repo #repoAll {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #repo #repoAll .repoUnit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 40vh;
-  width: 55vh;
-  text-align: justify;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 400px;
+  max-height: 30vh;
+  text-align: left;
   padding-top: 0.5rem;
+  min-width: 400px;
+  max-width: 10vh;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+
+main #repo #repoAll .repoUnit a {
+  width: 6rem;
 }
 
 main #repo #repoAll .repoUnit .repoImg {
@@ -271,9 +300,8 @@ main #repo #repoAll .repoUnit .repoDesc p {
   margin: 0.5rem 0;
 }
 
-main #repo #repoAll button {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+main #repo button {
+  float: right;
 }
 
 main #conteudo #conteudoContainer {
@@ -281,9 +309,9 @@ main #conteudo #conteudoContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-line-pack: distribute;
@@ -291,12 +319,21 @@ main #conteudo #conteudoContainer {
 }
 
 main #conteudo #conteudoContainer .conteudoUnit {
-  width: 20rem;
+  max-width: 40vh;
+  min-width: 20rem;
+}
+
+main #conteudo #conteudoContainer .conteudoUnit iframe {
+  width: 100%;
 }
 
 main #conteudo #conteudoContainer .conteudoUnit p {
   text-align: left;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+}
+
+main #conteudo button {
+  float: right;
 }
 
 footer {
