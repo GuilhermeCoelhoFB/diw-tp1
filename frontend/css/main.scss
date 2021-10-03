@@ -53,6 +53,12 @@ main {
       flex-direction: column;
       justify-content: space-evenly;
       text-align: left;
+      #socialContainer {
+        .socialImg {
+          height: 5vh;
+          margin: 1rem;
+        }
+      }
     }
   }
 
@@ -85,11 +91,11 @@ main {
     }
     .expEl {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: flex-start;
+      flex-wrap: wrap;
       align-items: center;
       span {
         padding: 4vw;
-        margin: 3vh;
         text-align: left;
         p {
           margin: 3vw 0;
@@ -98,8 +104,7 @@ main {
           opacity: 0.5;
         }
       }
-      img {
-        margin: 2vw;
+      .expImg {
         height: 25vh;
         justify-content: flex-start;
       }
@@ -136,6 +141,24 @@ main {
 
       button {
         align-self: flex-end;
+      }
+    }
+  }
+
+  #conteudo {
+    #conteudoContainer {
+      margin: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-content: space-around;
+
+      .conteudoUnit {
+        width: 20rem;
+        p {
+          text-align: left;
+          padding: 1rem 0;
+        }
       }
     }
   }

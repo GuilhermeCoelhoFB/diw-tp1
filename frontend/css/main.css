@@ -84,6 +84,11 @@ main section div .personalContainer {
   text-align: left;
 }
 
+main section div .personalContainer #socialContainer .socialImg {
+  height: 5vh;
+  margin: 1rem;
+}
+
 main .containerProjects {
   padding: 1vh;
   -webkit-box-orient: vertical;
@@ -133,9 +138,11 @@ main #exp .expEl {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -143,7 +150,6 @@ main #exp .expEl {
 
 main #exp .expEl span {
   padding: 4vw;
-  margin: 3vh;
   text-align: left;
 }
 
@@ -155,8 +161,7 @@ main #exp .expEl span h4 {
   opacity: 0.5;
 }
 
-main #exp .expEl img {
-  margin: 2vw;
+main #exp .expEl .expImg {
   height: 25vh;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -214,6 +219,29 @@ main #repo #repoAll .repoUnit .repoDesc p {
 main #repo #repoAll button {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+main #conteudo #conteudoContainer {
+  margin: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+main #conteudo #conteudoContainer .conteudoUnit {
+  width: 20rem;
+}
+
+main #conteudo #conteudoContainer .conteudoUnit p {
+  text-align: left;
+  padding: 1rem 0;
 }
 
 footer {
