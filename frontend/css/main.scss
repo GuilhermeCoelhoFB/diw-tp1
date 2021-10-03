@@ -42,21 +42,40 @@ main {
   h2 {
     text-align: left;
   }
-  section div {
+  #personal div {
     display: flex;
-    img {
-      height: 50vh;
+    flex-wrap: wrap;
+    #picGuilherme {
       align-items: flex-start;
       justify-content: flex-start;
-      margin: 2.5rem;
+      margin: 0 2.5rem 1rem 2.5rem;
+      max-height: 45vh;
+      min-height: 20vh;
     }
     .personalContainer {
       flex-direction: column;
-      justify-content: space-evenly;
       text-align: left;
+      max-width: 80vw;
+      min-width: 300px;
+      flex: 1;
+
+      .socialTextContainer {
+        display: flex;
+        flex-direction: column;
+      }
+      #personalTextContainer {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+      }
+
+      p {
+        padding: 1rem 0.5rem;
+      }
       #socialContainer {
         .socialImg {
-          height: 5vh;
+          max-height: 15vh;
+          min-height: 5vh;
           margin: 1rem;
         }
       }
@@ -64,6 +83,7 @@ main {
   }
 
   .containerProjects {
+    display: flex;
     padding: 1vh;
     flex-direction: column;
     justify-content: space-evenly;
