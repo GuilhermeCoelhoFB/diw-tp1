@@ -49,7 +49,8 @@ function loadPersonalInfo() {
                         </div>
                     </div>
                     </div>
-                    `;
+                        `;
+
     document.getElementById("personal").innerHTML = perfilSection;
   };
 
@@ -57,5 +58,46 @@ function loadPersonalInfo() {
     alert(`Erro na request, error: "  ${this.status} - ${this.statusText} `);
   };
   req.open("GET", "https://api.github.com/users/GuilhermeCoelhoFB");
+  req.send();
+
+  loadRepo();
+}
+
+function loadRepo() {
+  let req = new XMLHttpRequest();
+
+  req.onload = () => {
+    let dataJson = JSON.parse(req.responseText);
+    let repoContainerEl = document.querySelector("#repoAll");
+    let allReposArr = [];
+
+    for (let data of dataJson) {
+      let repoUnit = `
+                        <div class="repoUnit">
+                        <a
+                        target="_blank"
+                        href="${data.html_url}"
+                        >
+                        <img class="repoImg" src="img/folder-svgrepo-com.svg" alt="" />
+                        </a>
+                        <div class="repoDesc">
+                        <h3>${data.name}</h3>
+                        <p>
+                            ${data.description}
+                        </p>
+                        <h4>${data.updated_at}</h4>
+                        </div>
+                    </div>
+                    `;
+
+      allReposArr.push(repoUnit);
+    }
+    repoContainerEl.innerHTML = allReposArr.join("");
+  };
+
+  req.onerror = function () {
+    alert(`Erro na request, error: "  ${this.status} - ${this.statusText} `);
+  };
+  req.open("GET", "https://api.github.com/users/GuilhermeCoelhoFB/repos");
   req.send();
 }

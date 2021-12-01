@@ -92,6 +92,7 @@ main #personal div #picGuilherme {
   margin: 0 2.5rem 1rem 2.5rem;
   max-height: 45vh;
   min-height: 20vh;
+  border-radius: 10%;
 }
 
 main #personal div .personalContainer {
