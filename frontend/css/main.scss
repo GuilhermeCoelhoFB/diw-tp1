@@ -54,6 +54,7 @@ main {
   #personal div {
     display: flex;
     flex-wrap: wrap;
+
     #picGuilherme {
       align-items: flex-start;
       justify-content: flex-start;
@@ -61,12 +62,20 @@ main {
       max-height: 45vh;
       min-height: 20vh;
     }
+
     .personalContainer {
       flex-direction: column;
       text-align: left;
       max-width: 80vw;
       min-width: 300px;
       flex: 1;
+
+      #git-stats {
+        display: flex;
+        margin: 0 2.5rem 1rem 2.5rem;
+        max-width: 80vw;
+        min-width: 300px;
+      }
 
       .socialTextContainer {
         display: flex;

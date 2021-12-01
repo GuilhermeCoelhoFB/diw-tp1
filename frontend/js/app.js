@@ -20,6 +20,11 @@ function loadPersonalInfo() {
                             <strong>Sobre mim:</strong>
                             ${data.bio}
                         </p>
+                        <div id="git-stats">
+                            <a target="_blank" href="${data.html_url}">
+                                <img src="https://github-readme-stats.vercel.app/api?username=GuilhermeCoelhoFB&show_icons=true&theme=dark&include_all_commits=true&count_private=true"/>
+                            </a>
+                        </div>
                         <div class="socialTextContainer">
                             <h3>Redes Sociais</h3>
                             <div id="socialContainer">
@@ -28,7 +33,7 @@ function loadPersonalInfo() {
                                 href="${data.html_url}"
                                 ><img
                                 class="socialImg"
-                                src="../img/github-svgrepo-com.svg"
+                                src="img/github-svgrepo-com.svg"
                                 alt=""
                             /></a>
                             <a
@@ -36,7 +41,7 @@ function loadPersonalInfo() {
                                 href="${data.blog}"
                                 ><img
                                 class="socialImg"
-                                src="../img/linkedin-svgrepo-com.svg"
+                                src="img/linkedin-svgrepo-com.svg"
                                 alt=""
                             /></a>
                             </div>
@@ -44,7 +49,6 @@ function loadPersonalInfo() {
                         </div>
                     </div>
                     </div>
-                
                     `;
     document.getElementById("personal").innerHTML = perfilSection;
   };

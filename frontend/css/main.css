@@ -107,6 +107,15 @@ main #personal div .personalContainer {
           flex: 1;
 }
 
+main #personal div .personalContainer #git-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 2.5rem 1rem 2.5rem;
+  max-width: 80vw;
+  min-width: 300px;
+}
+
 main #personal div .personalContainer .socialTextContainer {
   display: -webkit-box;
   display: -ms-flexbox;
