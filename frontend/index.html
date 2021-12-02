@@ -26,15 +26,24 @@
             name="search"
             type="text"
             value=""
-            placeholder="Pesquisar..."
+            placeholder="Pesquisar Usuários no Github..."
           />
-          <img src="img/search-svgrepo-com.svg" alt="" />
+          <a href="#containerSearchRedirect">
+            <button id="searchBtn">
+              <img
+                src="img/search-svgrepo-com.svg"
+                alt="Pesquisar Usuários no Github"
+              />
+            </button>
+          </a>
         </div>
       </nav>
     </header>
 
     <main>
-      <section id="personal"></section>
+      <section id="personal">
+        <!-- Preenchido via API -->
+      </section>
 
       <section id="proj" class="containerProjects">
         <div class="titleContainer">
@@ -105,7 +114,9 @@
 
       <section id="repo">
         <h2>Repositórios Github (Obtidos via API)</h2>
-        <div id="repoAll"></div>
+        <div id="repoAll">
+          <!-- Preenchido via API -->
+        </div>
         <button>Carregar mais repositórios</button>
       </section>
 
@@ -148,6 +159,16 @@
         </div>
         <button>Carregar mais recomendações</button>
       </section>
+
+      <section id="proj" class="containerSearch">
+        <div class="titleSearch">
+          <h2>Resultados da Pesquisa</h2>
+        </div>
+        <div id="searchContainer" class="searchImgContainer">
+          <!-- preenchido via API -->
+        </div>
+      </section>
+      <div id="containerSearchRedirect"></div>
     </main>
 
     <footer>

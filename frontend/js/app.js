@@ -58,6 +58,7 @@ function loadPersonalInfo() {
     alert(`Erro na request, error: "  ${this.status} - ${this.statusText} `);
   };
   req.open("GET", "https://api.github.com/users/GuilhermeCoelhoFB");
+
   req.send();
 
   loadRepo();
@@ -99,5 +100,68 @@ function loadRepo() {
     alert(`Erro na request, error: "  ${this.status} - ${this.statusText} `);
   };
   req.open("GET", "https://api.github.com/users/GuilhermeCoelhoFB/repos");
+
   req.send();
 }
+
+function search(searchIn) {
+  const xhr = new XMLHttpRequest();
+
+  xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+      const dataJson = JSON.parse(xhr.responseText);
+      const responseItems = dataJson.items;
+      let searchContainer = document.querySelector("#searchContainer");
+      let allSearchArr = [];
+
+      for (let data of responseItems) {
+        let responseUnit = `
+                <a target="_blank" href="${data.html_url}" 
+                  <div class="searchImgEl">
+                        <img src="${data.avatar_url}" alt="resultado da pesquisa - imagem" />
+                        <h4>Nome: ${data.login}</h4>
+                  </div>
+                </a>
+                `;
+        allSearchArr.push(responseUnit);
+        if (allSearchArr.length == 5) {
+          break;
+        }
+      }
+      if (allSearchArr.length != 0 || allSearchArr.length != null) {
+        searchContainer.innerHTML = allSearchArr.join("");
+      } else {
+        searchContainer.innerHTML = `
+                  <div class="searchImgEl">
+                        <h4>Nada encontrado, tente outra pesquisa</h4>
+                  </div>
+      `;
+      }
+      document.querySelector(".containerSearch").style.display = "block";
+    }
+  });
+
+  let searchQuery = "https://api.github.com/search/users?q=" + searchIn.value;
+  xhr.open("GET", searchQuery);
+  xhr.setRequestHeader("Accept", "application/vnd.github.v3+json");
+  xhr.onerror = function () {
+    alert(`Erro na request, error: "  ${this.status} - ${this.statusText} `);
+  };
+  xhr.send();
+}
+
+let searchIn = document.querySelector("input[name=search]");
+let searchBtn = document.getElementById("searchBtn");
+
+searchIn.addEventListener("keyup", function (event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    // Trigger the button element with a click
+    searchBtn.click();
+  }
+});
+
+searchBtn.addEventListener("click", function (event) {
+  search(searchIn);
+});
